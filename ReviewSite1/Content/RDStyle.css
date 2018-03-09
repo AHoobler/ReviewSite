@@ -1,0 +1,23 @@
+﻿body {
+    background: url('Images/road.jpeg')no-repeat center center;
+    text-align: center;
+}
+
+div.thumbnail{
+    background: none;
+    text-align:center;
+}
+
+div.thumbnail.review{
+    text-align:center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+h3{
+    
+}
+
+p.a{
+    font-style: italic;
+}

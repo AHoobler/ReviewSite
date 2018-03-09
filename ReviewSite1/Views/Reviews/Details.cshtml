@@ -1,45 +1,30 @@
-﻿@model ReviewSite1.Models.Review
+﻿<link href="~/Content/RDStyle.css" rel="stylesheet" />
+
+@model ReviewSite1.Models.Review
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+
 
 <div>
-    <h4>Review</h4>
+    <h2>Review Details</h2>
     <div class="row">
+        <div class="thumbnail">
+            <h3> @Html.DisplayFor(model => model.Title) </h3>
 
-        <h3> @Html.DisplayFor(model => model.Title) </h3>
-
-        @*@Html.DisplayNameFor(model => model.Category.Type)*@
-
-        <p> Type of destination: @Html.DisplayFor(model => model.Category.Type) </p>
-
-        @*@Html.DisplayNameFor(model => model.Title)*@
+            <p> Type of destination: @Html.DisplayFor(model => model.Category.Type) </p>
 
 
+            <p>Review written by: @Html.DisplayFor(model => model.Name) on  @Html.DisplayFor(model => model.ReviewDate) </p>
 
-        @*@Html.DisplayNameFor(model => model.Name)*@
-
-        <p>Review written by: @Html.DisplayFor(model => model.Name)</p>
-
-        @*@Html.DisplayNameFor(model => model.ReviewDate)*@
-
-        <p> Review written on @Html.DisplayFor(model => model.ReviewDate) </p>
-
-
-        @*@Html.DisplayNameFor(model => model.ReviewContent)*@
-
-        <p> @Html.DisplayFor(model => model.ReviewContent) </p>
-
-        @*@Html.DisplayNameFor(model => model.WouldRecommend)*@
-
-        <p> Would  @Html.DisplayFor(model => model.Name) recommend this? : @Html.DisplayFor(model => model.WouldRecommend) </p>
-
-        @*@Html.DisplayNameFor(model => model.Rating)*@
-
-        <p> Rating: @Html.DisplayFor(model => model.Rating) / 10 </p>
+            <div class="thumbnail review">
+                <p class="a">" @Html.DisplayFor(model => model.ReviewContent) "</p>
+                <p> Would  @Html.DisplayFor(model => model.Name) recommend this? : @Html.DisplayFor(model => model.WouldRecommend) </p>
+                <p> Rating: @Html.DisplayFor(model => model.Rating) / 10 </p>
+            </div>
+        </div>
     </div>
 </div>
 <p>
