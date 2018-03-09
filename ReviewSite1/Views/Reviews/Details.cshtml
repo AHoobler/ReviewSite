@@ -8,65 +8,39 @@
 
 <div>
     <h4>Review</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Type)
-        </dt>
+    <div class="row">
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.Type)
-        </dd>
+        <h3> @Html.DisplayFor(model => model.Title) </h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+        @*@Html.DisplayNameFor(model => model.Category.Type)*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+        <p> Type of destination: @Html.DisplayFor(model => model.Category.Type) </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+        @*@Html.DisplayNameFor(model => model.Title)*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewDate)
-        </dd>
+        @*@Html.DisplayNameFor(model => model.Name)*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewContent)
-        </dt>
+        <p>Review written by: @Html.DisplayFor(model => model.Name)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewContent)
-        </dd>
+        @*@Html.DisplayNameFor(model => model.ReviewDate)*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.WouldRecommend)
-        </dt>
+        <p> Review written on @Html.DisplayFor(model => model.ReviewDate) </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.WouldRecommend)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
+        @*@Html.DisplayNameFor(model => model.ReviewContent)*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
+        <p> @Html.DisplayFor(model => model.ReviewContent) </p>
 
-    </dl>
+        @*@Html.DisplayNameFor(model => model.WouldRecommend)*@
+
+        <p> Would  @Html.DisplayFor(model => model.Name) recommend this? : @Html.DisplayFor(model => model.WouldRecommend) </p>
+
+        @*@Html.DisplayNameFor(model => model.Rating)*@
+
+        <p> Rating: @Html.DisplayFor(model => model.Rating) / 10 </p>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |

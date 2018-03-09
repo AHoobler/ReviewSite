@@ -6,64 +6,36 @@
 
 <h2>Reviews</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewContent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WouldRecommend)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th></th>
-    </tr>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="thumbnail">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewContent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WouldRecommend)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-        </td>
-    </tr>
+            <p> @Html.DisplayNameFor(model => model.Category.Type) :  @Html.DisplayFor(modelItem => item.Category.Type)</p>
+
+            <p> @Html.DisplayNameFor(model => model.Title) : @Html.DisplayFor(modelItem => item.Title)</p>
+
+            <p>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)</p>
+
+            <p> @Html.DisplayNameFor(model => model.ReviewDate) : @Html.DisplayFor(modelItem => item.ReviewDate)</p>
+
+            <p>@Html.DisplayNameFor(model => model.ReviewContent) : @Html.DisplayFor(modelItem => item.ReviewContent)</p>
+
+            <p>@Html.DisplayNameFor(model => model.WouldRecommend) : @Html.DisplayFor(modelItem => item.WouldRecommend)</p>
+
+            <p>@Html.DisplayNameFor(model => model.Rating) : @Html.DisplayFor(modelItem => item.Rating)</p>
+
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+            </p>
+        </div>
+    </div>
 }
 
-</table>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+
