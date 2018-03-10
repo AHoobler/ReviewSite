@@ -164,9 +164,12 @@
     <Content Include="Content\Images\clouds.mp4" />
     <Content Include="Content\Images\mountain.mp4" />
     <Content Include="Content\Images\mountains.jpeg" />
+    <Content Include="Content\Images\pexels-photo-698396.jpeg" />
+    <Content Include="Content\Images\pexels-photo-917487.jpeg" />
     <Content Include="Content\Images\road.jpeg" />
     <Content Include="Content\RDStyle.css" />
     <Content Include="Content\reviews.css" />
+    <Content Include="Content\StyleCat.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

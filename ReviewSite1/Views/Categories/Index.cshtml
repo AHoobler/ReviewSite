@@ -1,4 +1,6 @@
-﻿@model IEnumerable<ReviewSite1.Models.Category>
+﻿<link href="~/Content/StyleCat.css" rel="stylesheet" />
+
+@model IEnumerable<ReviewSite1.Models.Category>
 
 @{
     ViewBag.Title = "Index";
@@ -6,28 +8,28 @@
 
 <h2>Categories</h2>
 
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="thumbnail">
+                <p> @Html.DisplayFor(modelItem => item.Type)</p>
+
+
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CategoryID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CategoryID })
+                </p>
+            </div>
+        </div>
+    }
+
+
+</div>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CategoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
-        </td>
-    </tr>
-}
-
-</table>
