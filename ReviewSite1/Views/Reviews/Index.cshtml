@@ -6,38 +6,96 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Reviews</h2>
 
-@foreach (var item in Model)
-{
-    <div class="row">
-        <div class="thumbnail">
 
-            <p> @Html.DisplayNameFor(model => model.Category.Type) :  @Html.DisplayFor(modelItem => item.Category.Type)</p>
+@*@foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="thumbnail">
 
-            <p> @Html.DisplayNameFor(model => model.Title) : @Html.DisplayFor(modelItem => item.Title)</p>
+                <p> @Html.DisplayFor(modelItem => item.Category.Type)</p>
 
-            <p>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Title)</p>
 
-            <p> @Html.DisplayNameFor(model => model.ReviewDate) : @Html.DisplayFor(modelItem => item.ReviewDate)</p>
+                <p>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)</p>
 
-            <p>@Html.DisplayNameFor(model => model.ReviewContent) : @Html.DisplayFor(modelItem => item.ReviewContent)</p>
+                <p> @Html.DisplayNameFor(model => model.ReviewDate) : @Html.DisplayFor(modelItem => item.ReviewDate)</p>
 
-            <p>@Html.DisplayNameFor(model => model.WouldRecommend) : @Html.DisplayFor(modelItem => item.WouldRecommend)</p>
+                <p>@Html.DisplayNameFor(model => model.Rating) : @Html.DisplayFor(modelItem => item.Rating)</p>
 
-            <p>@Html.DisplayNameFor(model => model.Rating) : @Html.DisplayFor(modelItem => item.Rating)</p>
-
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
-            </p>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+                </p>
+            </div>
         </div>
-    </div>
-}
+    }
 
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+    </p>*@
+
+<div class="container review">
+    <h2>Reviews</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        @*<ol class="carousel-indicators">
+            <li data-target="#myCarousel" class="active"></li>
+            @foreach (var item in Model)
+            {
+                <li data-target="#myCarousel"></li>
+            }
+        </ol>*@
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <p>Create a new review</p>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="item">
+                    <div class="caption">
+
+                        <div class="revinfo">
+                            <p> </p>
+
+                            <p>@Html.DisplayFor(modelItem => item.Category.Type) @Html.DisplayFor(modelItem => item.Title) Review</p>
+
+                            <p>Written by @Html.DisplayFor(modelItem => item.Name) on @Html.DisplayFor(modelItem => item.ReviewDate)</p>
+
+                            <p> </p>
+
+                            <p>@Html.DisplayNameFor(model => model.Rating) : @Html.DisplayFor(modelItem => item.Rating) /10</p>
+                        </div> <!--End review info-->
+                        <div>
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+                            </p>
+                        </div><!--end links-->
+                    </div><!--end caption-->
+                </div><!-- end item-->
+            }
+        </div>
+        <!-- Left and right controls -->
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+</div>
+<!--End-->
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-

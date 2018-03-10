@@ -1,4 +1,18 @@
 ﻿body {
     background: url('Images/mountains.jpeg')no-repeat center center;
     text-align: center;
+    height: 100%;
+}
+
+div.carousel-inner {
+    height: 180px;
+    color: black;
+}
+
+.container.review{
+    margin-top: 75px;
+}
+
+.div.revinfo{
+    margin-top: 50px;
 }
