@@ -1,5 +1,5 @@
 ﻿body {
-    background: url('Images/mountains.jpeg')no-repeat center center;
+    background: url('Images/landscape.jpeg')no-repeat center center;
     text-align: center;
     height: 100%;
 }
@@ -15,4 +15,14 @@ div.carousel-inner {
 
 .div.revinfo{
     margin-top: 50px;
+}
+
+.caption{
+    margin: 20px;
+}
+
+p.new{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: large;
 }

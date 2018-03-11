@@ -7,53 +7,14 @@
 }
 
 
-
-@*@foreach (var item in Model)
-    {
-        <div class="row">
-            <div class="thumbnail">
-
-                <p> @Html.DisplayFor(modelItem => item.Category.Type)</p>
-
-                <p>@Html.DisplayFor(modelItem => item.Title)</p>
-
-                <p>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(modelItem => item.Name)</p>
-
-                <p> @Html.DisplayNameFor(model => model.ReviewDate) : @Html.DisplayFor(modelItem => item.ReviewDate)</p>
-
-                <p>@Html.DisplayNameFor(model => model.Rating) : @Html.DisplayFor(modelItem => item.Rating)</p>
-
-                <p>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
-                </p>
-            </div>
-        </div>
-    }
-
-
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
-    </p>*@
-
 <div class="container review">
     <h2>Reviews</h2>
+    <!--start carousel-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        @*<ol class="carousel-indicators">
-            <li data-target="#myCarousel" class="active"></li>
-            @foreach (var item in Model)
-            {
-                <li data-target="#myCarousel"></li>
-            }
-        </ol>*@
-        <!-- Wrapper for slides -->
+
         <div class="carousel-inner">
             <div class="item active">
-                <p>Create a new review</p>
+                <p class="new">Create a new review</p>
             </div>
             @foreach (var item in Model)
             {

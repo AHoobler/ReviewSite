@@ -3,21 +3,23 @@
     text-align: center;
 }
 
-div.thumbnail{
+div.thumbnail {
     background: none;
-    text-align:center;
+    text-align: center;
 }
 
-div.thumbnail.review{
-    text-align:center;
-    width: 50%;
-    margin-left: 25%;
+    div.thumbnail.review {
+        margin-top: 20px;
+        text-align: center;
+        width: 50%;
+        margin-left: 25%;
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+h3 {
 }
 
-h3{
-    
-}
-
-p.a{
+p.a {
+    margin-top: 20px;
     font-style: italic;
 }

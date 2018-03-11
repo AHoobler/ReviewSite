@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Tinos', serif;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,4 +24,21 @@ textarea {
     max-width: 280px;
 }
 
+
+a{ /*all links*/
+    color: darkred;
+    font-weight: bold;
+}
+
+a:hover{
+    color: teal;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: teal;
+}
+
+.navbar-inverse .navbar-brand {
+    color: slategrey;
+}
 

@@ -162,6 +162,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Homestyle.css" />
     <Content Include="Content\Images\clouds.mp4" />
+    <Content Include="Content\Images\landscape.jpeg" />
     <Content Include="Content\Images\mountain.mp4" />
     <Content Include="Content\Images\mountains.jpeg" />
     <Content Include="Content\Images\pexels-photo-698396.jpeg" />

@@ -14,5 +14,7 @@ div.row{
 }
 
 .thumbnail{
-    background: none;
+    background: white;
+    opacity: .7;
+    margin:15px;
 }
